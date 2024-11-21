@@ -1,8 +1,12 @@
 import { Stage, Layer } from 'react-konva';
 import { NotesCanvas } from './NotesCanvas';
 import { PitchEditor } from './PitchEditor';
+import { useAtom } from 'jotai';
+import { selectedNoteAtom } from '@/stores/pianoRollStore';
 
 export const PianoRollCanvas = () => {
+  const [selectedNote] = useAtom(selectedNoteAtom);
+
   return (
     <Stage width={window.innerWidth} height={window.innerHeight}>
       <Layer id="background-layer">
@@ -12,7 +16,7 @@ export const PianoRollCanvas = () => {
         <NotesCanvas />
       </Layer>
       <Layer id="pitch-layer">
-        <PitchEditor />
+        {selectedNote && <PitchEditor noteId={selectedNote} />}
       </Layer>
     </Stage>
   );

@@ -1,17 +1,32 @@
-import { Line, Circle } from 'react-konva';
+import { Line, Circle, Group } from 'react-konva';
 import { usePitchEditor } from '@/hooks/tools/use-pitch-editor';
 
-export const PitchEditor = ({ noteId }) => {
+interface PitchEditorProps {
+  noteId: string;
+}
+
+interface Point {
+  x: number;
+  y: number;
+}
+
+export const PitchEditor = ({ noteId }: PitchEditorProps) => {
   const { points, handlePointDrag } = usePitchEditor(noteId);
+
+  // Convert Point[] to number[] for the Line component
+  const flattenedPoints = points.reduce<number[]>((acc, point) => {
+    acc.push(point.x, point.y);
+    return acc;
+  }, []);
 
   return (
     <Group>
       <Line 
-        points={points}
+        points={flattenedPoints}
         stroke="blue"
         tension={0.5}
       />
-      {points.map((point, i) => (
+      {points.map((point: Point, i: number) => (
         <Circle
           key={i}
           x={point.x}

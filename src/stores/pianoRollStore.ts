@@ -11,9 +11,7 @@ export interface Note {
 export interface PitchPoint {
   x: number;
   y: number;
-  value: number;
 }
 
 export const notesAtom = atom<Note[]>([]);
 export const selectedNoteAtom = atom<string | null>(null);
-export const pitchPointsAtom = atom<PitchPoint[]>([]);
