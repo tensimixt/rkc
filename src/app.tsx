@@ -1,10 +1,10 @@
 import { ControlPanel } from '@/components/organisms/control-panel';
-import { KonvaCanvas } from '@/components/organisms/konva-canvas';
+import { PianoRollCanvas } from '@/components/organisms/PianoRollCanvas';
 
 function App() {
   return (
     <div className="flex h-svh items-stretch justify-end">
-      <KonvaCanvas />
+      <PianoRollCanvas />
       <ControlPanel />
     </div>
   );
