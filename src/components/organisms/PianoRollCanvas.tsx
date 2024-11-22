@@ -4,6 +4,8 @@ import { PitchEditor } from './PitchEditor';
 import { useAtom } from 'jotai';
 import { selectedNoteAtom } from '@/stores/pianoRollStore';
 
+
+
 export const PianoRollCanvas = () => {
   const [selectedNote] = useAtom(selectedNoteAtom);
 
