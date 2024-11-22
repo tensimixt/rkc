@@ -10,16 +10,13 @@ interface NoteProps {
 }
 
 export const Note = (props: NoteProps) => {
-  console.log('Rendering Note with props:', props);
-  
   return (
     <Rect
       {...props}
-      fill="#4287f5"  // bright blue
-      stroke="#2563eb" // darker blue
-      strokeWidth={2}
-      cornerRadius={5}
-      opacity={0.8}
+      fill="#4A90E2"     // Bright blue
+      stroke="#2171C7"   // Darker blue for border
+      cornerRadius={4}
+      draggable
     />
   );
 };

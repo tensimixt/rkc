@@ -3,13 +3,11 @@ import { Group } from 'react-konva';
 import { Note } from '../molecules/Note';
 import { notesAtom } from '@/stores/pianoRollStore';
 
-const PIXELS_PER_QUARTER = 100;
-const NOTE_HEIGHT = 20;
+const PIXELS_PER_QUARTER = 100;  // Increase this if notes are too small
+const NOTE_HEIGHT = 20;          // Increase this if notes are too thin
 
 export const NotesCanvas = () => {
   const [notes] = useAtom(notesAtom);
-  console.log('Notes in NotesCanvas:', notes);
-
   
   return (
     <Group>
