@@ -1,4 +1,3 @@
-import { ControlPanel } from '@/components/organisms/control-panel';
 import { PianoRollCanvas } from '@/components/organisms/PianoRollCanvas';
 import { useSetAtom } from 'jotai';
 import { notesAtom } from '@/stores/pianoRollStore';
