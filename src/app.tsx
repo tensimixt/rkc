@@ -42,9 +42,9 @@ function App() {
   }, [setNotes]);
 
   return (
-    <div>
+  
       <PianoRollCanvas />
-    </div>
+
   );
 }
 
