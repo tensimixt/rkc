@@ -1,4 +1,3 @@
-import { ControlPanel } from '@/components/organisms/control-panel';
 import { PianoRollCanvas } from '@/components/organisms/PianoRollCanvas';
 import { useSetAtom } from 'jotai';
 import { notesAtom } from '@/stores/pianoRollStore';
@@ -27,7 +26,6 @@ function App() {
   return (
     <div className="flex h-svh items-stretch">
       <PianoRollCanvas />
-      <ControlPanel />
     </div>
   );
 }
