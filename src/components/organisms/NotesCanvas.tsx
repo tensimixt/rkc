@@ -3,8 +3,8 @@ import { Group } from 'react-konva';
 import { Note } from '../molecules/Note';
 import { notesAtom } from '@/stores/pianoRollStore';
 
-const PIXELS_PER_QUARTER = 100; // Adjust this value based on your zoom level
-const NOTE_HEIGHT = 20; // Height of each note in pixels
+const PIXELS_PER_QUARTER = 100;
+const NOTE_HEIGHT = 20;
 
 export const NotesCanvas = () => {
   const [notes] = useAtom(notesAtom);
@@ -12,12 +12,11 @@ export const NotesCanvas = () => {
   return (
     <Group>
       {notes.map((note) => {
-        // Convert timeline properties to pixel values
         const noteProps = {
           id: note.id,
-          x: note.start * PIXELS_PER_QUARTER, // Convert start time to x position
-          y: (127 - note.pitch) * NOTE_HEIGHT, // Convert pitch to y position
-          width: note.duration * PIXELS_PER_QUARTER, // Convert duration to width
+          x: note.start * PIXELS_PER_QUARTER,
+          y: (127 - note.pitch) * NOTE_HEIGHT,
+          width: note.duration * PIXELS_PER_QUARTER,
           height: NOTE_HEIGHT,
           pitch: note.pitch,
         };

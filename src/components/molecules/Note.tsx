@@ -13,10 +13,9 @@ export const Note = (props: NoteProps) => {
   return (
     <Rect
       {...props}
-      fill="#4A90E2"
-      stroke="#2171C7"
-      cornerRadius={4}
-      draggable
+      fill="blue"
+      stroke="darkblue"
+      cornerRadius={5}
     />
   );
 };
