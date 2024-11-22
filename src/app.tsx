@@ -24,9 +24,9 @@ function App() {
   }, [setNotes]);
 
   return (
-    <div className="flex h-svh items-stretch">
+  
       <PianoRollCanvas />
-    </div>
+ 
   );
 }
 
