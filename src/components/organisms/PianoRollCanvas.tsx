@@ -3,6 +3,8 @@ import { NotesCanvas } from './NotesCanvas';
 import { PitchEditor } from './PitchEditor';
 import { useAtom } from 'jotai';
 import { selectedNoteAtom } from '@/stores/pianoRollStore';
+import { Rect } from 'react-konva';
+
 
 export const PianoRollCanvas = () => {
   const [selectedNote] = useAtom(selectedNoteAtom);
@@ -10,7 +12,11 @@ export const PianoRollCanvas = () => {
   return (
     <Stage width={800} height={600}>
       <Layer id="background-layer">
-        {/* Add background grid here if needed */}
+        <Rect
+          width={800}
+          height={600}
+          fill="#f0f0f0"
+        />
       </Layer>
       <Layer id="notes-layer">
         <NotesCanvas />

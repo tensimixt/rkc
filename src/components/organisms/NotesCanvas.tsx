@@ -8,6 +8,8 @@ const NOTE_HEIGHT = 20;
 
 export const NotesCanvas = () => {
   const [notes] = useAtom(notesAtom);
+  console.log('Notes in NotesCanvas:', notes);
+
   
   return (
     <Group>

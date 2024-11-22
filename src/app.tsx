@@ -1,3 +1,4 @@
+import { ControlPanel } from '@/components/organisms/control-panel';
 import { PianoRollCanvas } from '@/components/organisms/PianoRollCanvas';
 import { useSetAtom } from 'jotai';
 import { notesAtom } from '@/stores/pianoRollStore';
@@ -7,7 +8,7 @@ function App() {
   const setNotes = useSetAtom(notesAtom);
 
   useEffect(() => {
-    setNotes([
+    const initialNotes = [
       {
         id: "1",
         start: 0,
@@ -17,34 +18,17 @@ function App() {
           { x: 0, y: 0 },
           { x: 1, y: 0 }
         ]
-      },
-      {
-        id: "2",
-        start: 4,
-        duration: 2,
-        pitch: 64,
-        pitchPoints: [
-          { x: 0, y: 0 },
-          { x: 1, y: 0 }
-        ]
-      },
-      {
-        id: "3",
-        start: 6,
-        duration: 2,
-        pitch: 67,
-        pitchPoints: [
-          { x: 0, y: 0 },
-          { x: 1, y: 0 }
-        ]
       }
-    ]);
+    ];
+    console.log('Setting initial notes:', initialNotes);
+    setNotes(initialNotes);
   }, [setNotes]);
 
   return (
-  
+    <div className="flex h-svh items-stretch">
       <PianoRollCanvas />
-
+      <ControlPanel />
+    </div>
   );
 }
 
