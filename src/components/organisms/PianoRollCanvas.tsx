@@ -10,7 +10,7 @@ export const PianoRollCanvas = () => {
   const [selectedNote] = useAtom(selectedNoteAtom);
 
   return (
-    <Stage width={window.innerWidth} height={window.innerHeight}>
+  <Stage width={window.innerWidth} height={window.innerHeight}>
       <Layer id="background-layer">
         {/* Grid lines */}
       </Layer>
