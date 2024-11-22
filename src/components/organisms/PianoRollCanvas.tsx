@@ -4,15 +4,13 @@ import { PitchEditor } from './PitchEditor';
 import { useAtom } from 'jotai';
 import { selectedNoteAtom } from '@/stores/pianoRollStore';
 
-
-
 export const PianoRollCanvas = () => {
   const [selectedNote] = useAtom(selectedNoteAtom);
 
   return (
-  <Stage width={window.innerWidth} height={window.innerHeight}>
+    <Stage width={800} height={600}>
       <Layer id="background-layer">
-        {/* Grid lines */}
+        {/* Add background grid here if needed */}
       </Layer>
       <Layer id="notes-layer">
         <NotesCanvas />
