@@ -43,9 +43,8 @@ function App() {
   }, [setNotes]);
 
   return (
-    <div className="flex h-svh items-stretch justify-end">
+    <div>
       <PianoRollCanvas />
-      <ControlPanel />
     </div>
   );
 }
