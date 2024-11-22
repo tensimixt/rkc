@@ -12,7 +12,7 @@ function App() {
       {
         id: "1",
         start: 0,
-        duration: 2,
+        duration: 4,
         pitch: 60,
         pitchPoints: [
           { x: 0, y: 0 },
@@ -21,9 +21,19 @@ function App() {
       },
       {
         id: "2",
-        start: 2,
-        duration: 1,
+        start: 4,
+        duration: 2,
         pitch: 64,
+        pitchPoints: [
+          { x: 0, y: 0 },
+          { x: 1, y: 0 }
+        ]
+      },
+      {
+        id: "3",
+        start: 6,
+        duration: 2,
+        pitch: 67,
         pitchPoints: [
           { x: 0, y: 0 },
           { x: 1, y: 0 }

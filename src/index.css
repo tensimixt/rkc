@@ -81,3 +81,7 @@
 
 @media (prefers-color-scheme: dark) {
 }
+
+body {
+  background-color: #f0f0f0;
+}
